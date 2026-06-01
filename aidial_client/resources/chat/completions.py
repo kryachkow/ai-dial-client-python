@@ -29,7 +29,6 @@ from aidial_client._utils._openai import (
 )
 from aidial_client.resources.base import AsyncResource, Resource
 from aidial_client.types.chat import (
-    Addon,
     ChatCompletionChunk,
     ChatCompletionResponse,
     FunctionCallSpecParam,
@@ -62,7 +61,6 @@ class ChatCompletions(Resource):
         tool_choice: Union[
             Union[Literal["none", "auto"], ToolCallSpecParam], None
         ] = None,
-        addons: Union[Addon, None] = None,
         temperature: Union[float, None] = None,
         top_p: Union[float, None] = None,
         n: Union[int, None] = None,
@@ -100,7 +98,6 @@ class ChatCompletions(Resource):
         tool_choice: Union[
             Union[Literal["none", "auto"], ToolCallSpecParam], None
         ] = None,
-        addons: Union[Addon, None] = None,
         temperature: Union[float, None] = None,
         top_p: Union[float, None] = None,
         n: Union[int, None] = None,
@@ -137,7 +134,6 @@ class ChatCompletions(Resource):
         tool_choice: Union[
             Union[Literal["none", "auto"], ToolCallSpecParam], None
         ] = None,
-        addons: Union[Addon, None] = None,
         temperature: Union[float, None] = None,
         top_p: Union[float, None] = None,
         n: Union[int, None] = None,
@@ -182,7 +178,6 @@ class ChatCompletions(Resource):
                 "tools": tools,
                 "top_p": top_p,
                 "user": user,
-                "addons": addons,
                 "max_prompt_tokens": max_prompt_tokens,
                 "custom_fields": custom_fields,
                 "logprobs": logprobs,
@@ -242,7 +237,6 @@ class AsyncChatCompletions(AsyncResource):
         tool_choice: Union[
             Union[Literal["none", "auto"], ToolCallSpecParam], None
         ] = None,
-        addons: Union[Addon, None] = None,
         temperature: Union[float, None] = None,
         top_p: Union[float, None] = None,
         n: Union[int, None] = None,
@@ -278,7 +272,6 @@ class AsyncChatCompletions(AsyncResource):
         tool_choice: Union[
             Union[Literal["none", "auto"], ToolCallSpecParam], None
         ] = None,
-        addons: Union[Addon, None] = None,
         temperature: Union[float, None] = None,
         top_p: Union[float, None] = None,
         n: Union[int, None] = None,
@@ -315,7 +308,6 @@ class AsyncChatCompletions(AsyncResource):
         tool_choice: Union[
             Union[Literal["none", "auto"], ToolCallSpecParam], None
         ] = None,
-        addons: Union[Addon, None] = None,
         temperature: Union[float, None] = None,
         top_p: Union[float, None] = None,
         n: Union[int, None] = None,
@@ -359,7 +351,6 @@ class AsyncChatCompletions(AsyncResource):
                 "tools": tools,
                 "top_p": top_p,
                 "user": user,
-                "addons": addons,
                 "max_prompt_tokens": max_prompt_tokens,
                 "custom_fields": custom_fields,
                 "logprobs": logprobs,

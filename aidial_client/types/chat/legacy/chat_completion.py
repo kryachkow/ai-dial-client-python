@@ -79,11 +79,6 @@ class Message(ExtraForbidModel):
     function_call: Optional[FunctionCall] = None
 
 
-class Addon(ExtraForbidModel):
-    name: Optional[StrictStr] = None
-    url: Optional[StrictStr] = None
-
-
 class Function(ExtraForbidModel):
     name: StrictStr
     description: Optional[StrictStr] = None
@@ -163,6 +158,5 @@ class ChatCompletionRequestCustomFields(ExtraForbidModel):
 
 
 class ChatCompletionRequest(AzureChatCompletionRequest):
-    addons: Optional[List[Addon]] = None
     max_prompt_tokens: Optional[PositiveInt] = None
     custom_fields: Optional[ChatCompletionRequestCustomFields] = None
